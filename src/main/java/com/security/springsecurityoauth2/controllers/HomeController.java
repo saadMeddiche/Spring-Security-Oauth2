@@ -23,6 +23,11 @@ public class HomeController {
     public String home(@AuthenticationPrincipal OAuth2User user){
         return "Welcome back ," + user.getAttribute("name");
     }
+    @GetMapping("/secured/informations")
+    public String informations(@AuthenticationPrincipal OAuth2User user){
+        return user.toString();
+    }
+
 
 
 

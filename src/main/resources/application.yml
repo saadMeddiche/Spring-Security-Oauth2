@@ -1,0 +1,29 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: "325027227854-t925cnjnv0q3oki1l23dusujr5rkivls.apps.googleusercontent.com"
+            client-secret: "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"
+          github:
+            client-id: "30c5b14941740d6084d5"
+            client-secret: "8416fcfb8e28d3e9527db6feb5f7db899238effd"
+
+  # Data Base configuration
+  datasource:
+    url: jdbc:mysql://localhost:3306/springsecurityoauth2?createDatabaseIfNotExist=true
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # Jakarta persistence configuration
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+    show-sql: true
+
+    hibernate:
+      ddl-auto: update
